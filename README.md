@@ -5,3 +5,8 @@ Example Go implementation of Auth0 with Labstack's Echo. This is really an adapt
 - added a function and mddleware to demonstrate getting user data from the Auth0 `/userinfo` [endpoint](https://auth0.com/docs/api/authentication?shell#get-user-info).
 
 
+## Giving it a test run
+1. You will need to have an [Auth0 account](https://auth0.com/). It is free for basic use and getting your feet wet.
+2. Edit the run_sample.sh to contain your details.
+3. You will also need to edit line 191 with the email address you are using to test with.
+4. Then a simple `sh run.sh` will set your ENV and launch the server. (I rename *run_sample.sh* to *run.sh*)
