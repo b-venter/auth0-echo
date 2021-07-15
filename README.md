@@ -10,3 +10,8 @@ Example Go implementation of Auth0 with Labstack's Echo. This is really an adapt
 2. Edit the run_sample.sh to contain your details.
 3. You will also need to edit [line 191](https://github.com/b-venter/auth0-echo/blob/9c4945df5ec204f626b73845756a626d5f7aab0b/server.go#L191) of *server.go* with the email address you are using to test with. Or just remove the test.
 4. Then a simple `sh run.sh` will set your ENV and launch the server. (I rename *run_sample.sh* to *run.sh*)
+
+## Useful links
+* Test tokens: https://jwt.io/
+* Human readable iat and exp: https://www.epochconverter.com/
+* Auth0 API: https://auth0.com/docs/api/authentication
