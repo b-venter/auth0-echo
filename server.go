@@ -11,8 +11,8 @@ import (
 
 	auth0 "github.com/b-venter/auth0-go-jwt-middleware"
 	jwt "github.com/golang-jwt/jwt"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 /* Sensitive/custom settings */
@@ -189,8 +189,7 @@ func middleUser(next echo.HandlerFunc) echo.HandlerFunc {
 
 		//TODO: Replace this with a database lookup
 		if userInfo["email"] != "my-email@gmail.com" {
-			//Note: https://stackoverflow.com/questions/3297048/403-forbidden-vs-401-unauthorized-http-responses
-			return echo.ErrForbidden
+			return echo.ErrForbidden //Note: https://stackoverflow.com/questions/3297048/403-forbidden-vs-401-unauthorized-http-responses
 		}
 
 		return next(c) //Proceed to next.
